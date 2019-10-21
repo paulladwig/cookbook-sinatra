@@ -1,0 +1,9 @@
+<h1>Which elements do you want to delete?</h1>
+
+<form action="index_delete">
+  <% @recipes.each_with_index do |recipe, index| %>
+    <input type="radio" name="index" value=<%=index%> checked> <%= recipe.name %><br>
+  <% end %>
+    <input type="submit" value="Submit"><br>
+</form>
+

@@ -1,0 +1,16 @@
+<h1>Welcome to your cookbook!</h1>
+<form action="mark_read">
+<ul style="list-style: none;">
+  <% @recipes.each_with_index do |recipe, index| %>
+    <li>
+      <input type="checkbox" name="status" value=<%=index%> <%="checked" if recipe.status %>><a href="/view?index=<%=index%>name=<%=recipe.name%>"><%=recipe.name%></a><br>
+    </li>
+  <% end %>
+</ul>
+<input type="submit" value="Save"><br>
+</form>
+
+<a href="/new">Create</a><br>
+<a href="/destroy">Delete</a><br>
+<a href="/import_form">Import New</a>
+

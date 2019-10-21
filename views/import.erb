@@ -1,0 +1,8 @@
+<h1>Which recipies do you want to save?</h1>
+
+<form action="save_new">
+  <% @findings.each_with_index do |recipe, index| %>
+    <input type="radio" name="index" value=<%=index%> checked> <%= recipe.name %><br>
+  <% end %>
+    <input type="submit" value="Save"><br>
+</form>
